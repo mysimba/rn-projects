@@ -1,19 +1,44 @@
 import * as React from 'react';
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, Text, View} from "react-native";
 import Margin from "./Margin";
+import styled from 'styled-components/native'
 
-const MyProfile = (props) => {
+const Container = styled.View`
+  flex-direction: row;
+`
+const ProfileImage = styled.Image`
+  width: ${(props) => props.size}px;
+  height: ${(props) => props.size}px;
+  border-radius: ${(props) => props.size * 0.4}px;
+`
 
+const TextContainer = styled.View`
+  justify-content: center;
+  margin-left: 10px;
+`;
+const NameText = styled.Text`
+  font-weight: ${(props) => props.isMe ? "bold": "normal"};
+  font-size: ${(props) => props.isMe ? 16 : 15}px;
+`;
+const IntroductionText = styled.Text`
+  font-size: ${(props) => props.isMe ? 12 : 11}px;
+  color: grey;
+`;
+
+export default ({ uri, name, introduction, isMe }) => {
+    const size = isMe ? 50 : 40;
     return (
-        <View style={{flexDirection: "row"}}>
-            <Image source={{uri: props.uri}} style={{width: 50, height: 50, borderRadius: 20}}/>
-            <View style={{justifyContent: "center", marginLeft: 10}}>
-                <Text style={{fontWeight: "bold", fontSize: 16}}>{props.name}</Text>
-                <Margin height={6} />
-                <Text style={{fontSize: 12, color: "grey"}}>{props.introduction}</Text>
-            </View>
-        </View>
-    );
-};
-
-export default MyProfile;
+        <Container>
+            <ProfileImage source={{ uri }} size={size} />
+            <TextContainer>
+                <NameText isMe={isMe}>{name}</NameText>
+                {!!introduction && (
+                    <View>
+                        <Margin height={isMe ? 6 : 2} />
+                        <IntroductionText isMe={isMe}>{introduction}</IntroductionText>
+                    </View>
+                )}
+            </TextContainer>
+        </Container>
+    )
+}

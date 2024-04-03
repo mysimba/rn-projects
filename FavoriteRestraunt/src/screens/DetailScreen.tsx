@@ -35,7 +35,7 @@ const DetailScreen = () => {
       },
     });
     navigation.goBack();
-  }, []);
+  }, [routes.params.address, routes.params.title, navigation]);
 
   return (
     <View style={{flex: 1}}>

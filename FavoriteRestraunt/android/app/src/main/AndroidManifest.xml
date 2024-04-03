@@ -1,13 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
             android:name=".MainApplication"
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
-            android:allowBackup="false"
+            android:allowBackup="true"
             android:theme="@style/AppTheme">
         <activity
                 android:name=".MainActivity"
@@ -20,12 +21,9 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="kakaolink" android:scheme="kakao19f11cc9dcb6a6141f4ded4c3384e28d"/>
-            </intent-filter>
         </activity>
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyDXB6ZcF2OnSVwdV0yUHSsIqjsKXXX-ml8"/>
     </application>
 </manifest>

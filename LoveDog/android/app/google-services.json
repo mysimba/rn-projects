@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "766418051955",
+    "firebase_url": "https://peak-key-419007-default-rtdb.firebaseio.com",
+    "project_id": "peak-key-419007",
+    "storage_bucket": "peak-key-419007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766418051955:android:c362db2164443101e2db06",
+        "android_client_info": {
+          "package_name": "com.lovedog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766418051955-b8a4lcgv830o19u1h6mbc7kd25nlf965.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAO0R7VK12qOMgMvuMJH97Pq145_RgKto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766418051955-b8a4lcgv830o19u1h6mbc7kd25nlf965.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "766418051955-75j3dpidoc4b9r7dte3kk6gt2fvpfce3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rnproject.lovedog"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
